@@ -32,10 +32,35 @@
             }
         }
 
+        table {
+            overflow-x: scroll;
+        }
+
         #wordTable th,
         #wordTable td {
             text-align: center;
             vertical-align: middle;
+
+        }
+
+        td {
+            word-break: normal;
+        }
+
+        .overflow_td {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            word-wrap: normal;
+            white-space: nowrap;
+        }
+
+        .overflow_td::-webkit-scrollbar {
+            height: 0px;
+        }
+
+        td:nth-child(3) {
+            display: flex;
+            flex-wrap: nowrap;
         }
     </style>
 </head>

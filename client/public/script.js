@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const editIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
                 const editPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
                 const deleteButton = document.createElement('button');
-
                 wordCell.textContent = word.word;
                 meaningCell.textContent = word.meaning;
+                meaningCell.classList.add("overflow_td")
 
                 editIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
                 editIcon.setAttribute('width', '16');
