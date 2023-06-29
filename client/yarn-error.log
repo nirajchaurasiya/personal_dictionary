@@ -1,0 +1,38 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\niraj\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add nodemon
+
+PATH: 
+  C:\Program Files\PowerShell\7;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PowerShell\7\;C:\ProgramData\chocolatey\bin;A:\gcc-11.1.0-no-debug\bin;C:\Program Files (x86)\Simply Fortran 3\mingw-w64\bin;C:\Program Files (x86)\Simply Fortran 3\mingw-w64\x86_64-w64-mingw32\lib32;C:\Program Files (x86)\Simply Fortran 3\mingw-w64\x86_64-w64-mingw32\lib64;C:\Program Files\Dart\dart-sdk\bin;C:\MinGW\bin;C:\Program Files (x86)\dotnet\;C:\Users\niraj\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Users\niraj\AppData\Local\activestate\cache\bin;C:\Users\niraj\AppData\Local\ActiveState\StateTool\release\bin;C:\Users\niraj\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\niraj\AppData\Local\Programs\Python\Python310\;C:\Users\niraj\AppData\Local\Microsoft\WindowsApps;C:\Users\niraj\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2022.1\bin;;C:\Users\niraj\AppData\Roaming\npm;A:\gcc-11.1.0-no-debug\bin;A:\dartsdk-windows-x64-release\dart-sdk\bin;C:\Users\niraj\Downloads\flutter_windows_2.10.5-stable\flutter\bin;A:\mysql-8.0.29-winx64-debug-test\mysql-8.0.29-winx64;C:\MinGW\bin;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\heroku\bin;C:\Program Files\JetBrains\CLion 2022.3.1\bin;;C:\Users\niraj\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.0.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error [ERR_SOCKET_CONNECTION_TIMEOUT]: Socket connection timeout
+      at new NodeError (node:internal/errors:399:5)
+      at internalConnectMultiple (node:net:1098:20)
+      at Timeout.internalConnectMultipleTimeout (node:net:1637:3)
+      at listOnTimeout (node:internal/timers:575:11)
+      at process.processTimers (node:internal/timers:514:7)
+
+npm manifest: 
+  {
+    "name": "personal_dictionary",
+    "version": "1.0.0",
+    "description": "this is my personal dictionary",
+    "main": "index.js",
+    "author": "Niraj Chaurasiya",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

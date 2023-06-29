@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Personal Dictionary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .loader {
+            display: none;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #wordTable th,
+        #wordTable td {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Personal Dictionary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <form id="searchForm" class="form-inline my-2 my-lg-0 ml-auto">
+                <input required class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <form id="dictionaryForm" class="mb-3">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <input required type="text" id="wordInput" class="form-control" placeholder="Enter a word">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input required type="text" id="meaningInput" class="form-control" placeholder="Enter the meaning">
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn w-100 btn-primary">Add Word</button>
+            </div>
+        </form>
+        <div class="table-responsive">
+            <table id="wordTable" class="table">
+                <thead class="w-100">
+                    <tr class="w-100">
+                        <th>Word</th>
+                        <th>Meaning</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="wordTableBody"></tbody>
+            </table>
+            <div id="loader" class="loader overflow-hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
