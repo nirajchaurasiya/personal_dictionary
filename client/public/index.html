@@ -11,15 +11,34 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .loader {
+            position: fixed;
+            left: 50%;
+            top: 50%;
             display: none;
-            border: 4px solid #f3f3f3;
+            border: 5px solid #f3f3f3;
             border-top: 4px solid #3498db;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 2s linear infinite;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
             margin: 0 auto;
             margin-top: 10px;
+        }
+
+        /* Blurry Background */
+        body.loader-blur {
+            filter: blur(8px);
+            pointer-events: none;
+        }
+
+        #loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
         }
 
         @keyframes spin {
@@ -33,25 +52,19 @@
         }
 
         table {
-            overflow-x: scroll;
+            overflow: hidden !important;
         }
 
         #wordTable th,
         #wordTable td {
             text-align: center;
             vertical-align: middle;
-
-        }
-
-        td {
-            word-break: normal;
         }
 
         .overflow_td {
             overflow-x: scroll;
             overflow-y: hidden;
-            word-wrap: normal;
-            white-space: nowrap;
+            white-space: wrap;
         }
 
         .overflow_td::-webkit-scrollbar {
@@ -105,7 +118,8 @@
                 </thead>
                 <tbody id="wordTableBody"></tbody>
             </table>
-            <div id="loader" class="loader overflow-hidden"></div>
+            <div id="loader-overlay" class="loader"></div>
+            <div id="loader" class="loader"></div>
         </div>
     </div>
 
